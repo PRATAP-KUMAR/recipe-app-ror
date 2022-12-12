@@ -143,7 +143,7 @@ Not yet deployed
 👤 **Habib Payenda**
 
 - GitHub: [@githubhandle](https://github.com/HabibPayenda)
-- Twitter: [@twitterhandle](https://twitter.com/)
+- Twitter: [@twitterhandle](https://twitter.com/PayendaHabib)
 - LinkedIn: [@LinkedIn](https://www.linkedin.com/in/habibpayenda/)
 
 👤 **PRATAP PANABAKA**
