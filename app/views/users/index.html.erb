@@ -1,3 +1,6 @@
-<%if user_signed_in? do%>
-  <h1>Users</h1>
-<%end%>
+<h1>Users</h1>
+
+you are logged in as: <h3><%= current_user.email %></h3>
+
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+
