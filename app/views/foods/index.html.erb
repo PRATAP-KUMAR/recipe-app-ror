@@ -1,0 +1,34 @@
+<div class="foodsMainContainer">
+  <div class="foodsHeadings">
+    <p>Food</p>
+    <p>Mesurment Unit</p>
+    <p>Unit Price</p>
+    <p>Action</p>
+  </div>
+  <ul class="foodsList">
+    <%@foods.each do |food|%>
+      <li class="foodsListItem">
+        <div class="itemOne">
+          <p>
+            <%= food.name%>
+          </p>
+        </div>
+        <div class="itemTwo">
+          <p>
+            <%= food.measurement_unit%>
+          </p>
+        </div>
+        <div class="itemThree">
+          <p>
+            <%= food.quantity%>
+          </p>
+        </div>
+        <div class="itemFour">
+          <button>
+            Delete
+          </button>
+        </div>
+      </li>
+    <%end%>
+  </ul>
+</div>
