@@ -1,0 +1,8 @@
+<h1>Recipes</h1>
+
+<%@recipes.each do |recipe|%>
+  <div class=index-container>
+    Recipe Name: <%= recipe.name %><br><br>
+    Recipe Description: <%= recipe.description %>
+  </div>
+<%end%>
