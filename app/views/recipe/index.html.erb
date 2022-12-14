@@ -1,8 +1,16 @@
-<h1>Recipes</h1>
-
-<%@recipes.each do |recipe|%>
+<% @recipes.each_with_index do |recipe, idx| %>
+<%= link_to (recipe_path(recipe)) do %>
   <div class=index-container>
-    Recipe Name: <%= recipe.name %><br><br>
-    Recipe Description: <%= recipe.description %>
+    <div class=recipe-card>
+      <div class=left-box>
+        <p><%= "RECIPE #{idx+1}" %></p>
+        <h2><%= recipe.name %></h2>
+        <%= link_to 'REMOVE' %>
+      </div>
+      <div class=right-box>
+        <%= recipe.description %>
+      </div>
+    </div>
   </div>
+  <%end%>
 <%end%>

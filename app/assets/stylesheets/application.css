@@ -2,6 +2,10 @@ body {
   margin: 50px 200px;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:link {
   color: #c7aa29;
 }
@@ -73,10 +77,76 @@ a:active {
   margin-top: 10px;
 }
 
+.home-page {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
 .index-container {
   margin: 20px 0;
   padding: 2px;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid #717894;
   background: #a8cac0;
+}
+
+.recipe-card {
+  display: flex;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  flex: 0.45;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.left-box > p {
+  font-size: 10px;
+  font-style: italic;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.right-box {
+  flex: 0.55;
+  font-size: 20px;
+  align-items: center;
+  padding: 12px;
+}
+
+.table {
+  width: 100%;
+  color: #fff;
+}
+
+.table,
+th,
+td {
+  border: 2px solid #43aadd;
+  border-collapse: collapse;
+  padding: 12px 5px;
+}
+
+th {
+  background-color: #101110;
+}
+
+tr {
+  background-color: #1b3c5c;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #85868d;
+}
+
+.bar-hor {
+  display: flex;
+  justify-content: space-between;
 }

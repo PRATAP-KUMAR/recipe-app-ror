@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root "user#index"
   get "food/index", to: "food#index"
   get "recipe/index", to: "recipe#index"
+  get "recipe/:id", to: "recipe#show"
+  get "food/new", to: "food#new"
+  resources :recipe
 end

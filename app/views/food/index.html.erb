@@ -1,3 +1,4 @@
+<% if 2+2 != 4 %>
 <div class="foodsMainContainer">
   <div class="foodsHeadings">
     <p>Food</p>
@@ -32,3 +33,25 @@
     <%end%>
   </ul>
 </div>
+<% end %>
+
+<%= link_to "New Food", food_new_path %>
+
+<table class=table>
+<tr>
+  <th>Food</th>
+  <th>Mesurment Unit</th>
+  <th>Unit Price</th>
+  <th>Action</th>
+</tr>
+<% @foods.each do |food| %>
+<tr>
+  <td><%= food.name %></td>
+  <td><%= food.measurement_unit %></td>
+  <td><%= food.price %></td>
+  <td><%= link_to 'DELETE' %></td>
+</tr>
+<% end %>
+</table>
+
+
