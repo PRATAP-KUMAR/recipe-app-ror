@@ -133,6 +133,11 @@ td {
   padding: 12px 5px;
 }
 
+tr {
+  background-color: #717894;
+  text-align: center;
+}
+
 tr:nth-child(even) {
   background-color: #85868d;
 }
@@ -183,11 +188,6 @@ tr:nth-child(even) {
   background-color: #1b3c5c;
 }
 
-tr {
-  background-color: #717894;
-  text-align: center;
-}
-
 .foodDeleteBtn {
   background-color: transparent;
   border: none;
@@ -210,7 +210,7 @@ tr {
   gap: 10px;
 }
 
-.addFoodBtn, 
+.addFoodBtn,
 .addFoodBtn:visited,
 .addFoodBtn:active {
   background-color: #213ec0;
