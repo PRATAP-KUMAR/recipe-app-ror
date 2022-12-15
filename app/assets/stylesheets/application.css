@@ -133,15 +133,6 @@ td {
   padding: 12px 5px;
 }
 
-th {
-  background-color: #101110;
-}
-
-tr {
-  background-color: #1b3c5c;
-  text-align: center;
-}
-
 tr:nth-child(even) {
   background-color: #85868d;
 }
@@ -186,4 +177,21 @@ tr:nth-child(even) {
   color: white;
   padding: 3px 10px;
   border-radius: 5px;
+}
+
+.addFoodBtn, 
+.addFoodBtn:visited,
+.addFoodBtn:active {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.tableHeading {
+  background-color: #1b3c5c;
+}
+
+tr {
+  background-color: #717894;
 }
