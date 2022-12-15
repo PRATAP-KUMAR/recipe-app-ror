@@ -1,11 +1,26 @@
+<div class="newRecipeContainer">
+<h1 class="newRecipeTitle">
 Create Recipe
+</h1>
 
 <%= form_with model: @recipe, url: user_recipe_index_path(@user), local: true do |f| %>
-<ul>
-    <%= f.text_field :name, placeholder: 'Name' %>
-    <%= f.text_field :preparation_time, placeholder: 'Preparation Time - Enter time in minutes' %>
-    <%= f.text_field :cooking_time, placeholder: 'Cooking Time - Enter time in minutes' %>
-    <%= f.text_field :description, placeholder: 'Description' %>
-    <%= f.submit 'Submit' %>
-</ul>
+    <p>
+    <%= f.label :name, class: "foodFormLabel" %> <br>
+    <%= f.text_field :name, placeholder: 'Name', class: "foodFormField wxl" %>
+    </p>
+    <p>
+    <%= f.label :preparation_time, class: "foodFormLabel" %> <br>
+    <%= f.text_field :preparation_time, placeholder: 'Preparation Time - Enter time in minutes', class: "foodFormField wxl" %>
+    </p>
+    <p>
+    <%= f.label :cooking_time, class: "foodFormLabel" %> <br>
+    <%= f.text_field :cooking_time, placeholder: 'Cooking Time - Enter time in minutes', class: "foodFormField wxl" %>
+    </p>
+    <p>
+    <%= f.label :description, class: "foodFormLabel" %> <br>
+    <%= f.text_field :description, placeholder: 'Description', class: "foodFormField wxl" %>
+    </p>
+    <%= f.submit 'Submit', class: "foodFormSubmit" %>
+
 <% end %>
+</div>

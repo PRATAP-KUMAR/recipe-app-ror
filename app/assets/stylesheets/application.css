@@ -133,12 +133,8 @@ td {
   padding: 12px 5px;
 }
 
-th {
-  background-color: #101110;
-}
-
 tr {
-  background-color: #1b3c5c;
+  background-color: #717894;
   text-align: center;
 }
 
@@ -186,4 +182,64 @@ tr:nth-child(even) {
   color: white;
   padding: 3px 10px;
   border-radius: 5px;
+}
+
+.tableHeading {
+  background-color: #1b3c5c;
+}
+
+.foodDeleteBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+
+.foodDeleteBtn:hover {
+  color: darkred;
+  transform: scale(1.1);
+}
+
+.foodList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addFoodBtn,
+.addFoodBtn:visited,
+.addFoodBtn:active {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  width: 80px;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.newRecipeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newRecipeTitle {
+  color: #213ec0;
+}
+
+.wxl {
+  width: 150%;
+}
+
+.helloMessage {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #213ec0;
+  font-size: 22px;
 }
