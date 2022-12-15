@@ -1,0 +1,33 @@
+<div>
+  <h2><%= @recipe.name %></h2>
+  Preparation time: <%= @recipe.preparation_time/60.0 %> hrs <br>
+  Cooking time: <%= @recipe.cooking_time/60.0 %> hrs <br>
+  <%= @recipe.description %>
+</div>
+
+<div class=bar-hor>
+  <%= button_to 'Generate shopping list' %>
+  <%= button_to 'Add ingredient' %>
+</div>
+
+<hr>
+
+<table class=table>
+<tr>
+  <th>Food</th>
+  <th>Quantity</th>
+  <th>Value</th>
+  <th>Actions</th>
+</tr>
+<% @foods.each do |food| %>
+<tr>
+  <td><%= food.name %></td>
+  <td><%= food.quantity %></td>
+  <td><%= food.price %></td>
+  <td>
+    <%= link_to 'Modify' %>
+    <%= link_to 'Remove' %>
+  </td>
+</tr>
+<% end %>
+</table>

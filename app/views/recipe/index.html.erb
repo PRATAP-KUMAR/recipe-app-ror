@@ -1,8 +1,21 @@
-<h1>Recipes</h1>
+<%= "Hi #{current_user.name}, would you like to add a recipe?" %><br>
+<%= link_to 'Add Recipe', new_user_recipe_path(current_user) %>
 
-<%@recipes.each do |recipe|%>
-  <div class=index-container>
-    Recipe Name: <%= recipe.name %><br><br>
-    Recipe Description: <%= recipe.description %>
-  </div>
+<% @recipes.each_with_index do |recipe, idx| %>
+    <div class=index-container>
+      <div class=recipe-card>
+        <div class=left-box>
+          <p><%= "RECIPE #{idx+1}" %></p>
+          <h2><%= recipe.name %></h2>
+          <%= button_to 'REMOVE', user_recipe_path(user_id: current_user.id, id: recipe.id), method: :delete %>
+        </div>
+        <div class=right-box>
+          <%= recipe.description %>
+        </div>
+      </div>
+    </div>
 <%end%>
+
+<%# <%= button_to 'Delete', article_path(article), method: :delete %>
+
+  <%# <%= link_to user_recipe_path(user_id: current_user.id, id: recipe.id) do %>
