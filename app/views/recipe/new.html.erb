@@ -1,14 +1,11 @@
 Create Recipe
 
-<%= form_with model: @recipe, url: new_user_recipe_path, local: true do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :title %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
+<%= form_with model: @recipe, url: user_recipe_index_path(@user), local: true do |f| %>
+<ul>
+    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.text_field :preparation_time, placeholder: 'Preparation Time - Enter time in minutes' %>
+    <%= f.text_field :cooking_time, placeholder: 'Cooking Time - Enter time in minutes' %>
+    <%= f.text_field :description, placeholder: 'Description' %>
     <%= f.submit 'Submit' %>
+</ul>
 <% end %>

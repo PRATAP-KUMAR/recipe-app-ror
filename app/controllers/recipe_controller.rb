@@ -10,9 +10,23 @@ class RecipeController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @user = current_user
   end
 
-  # def create
-  #   @recipe = Recipe.new()
-  # end
+  def create
+    @user = current_user
+    @recipe = @user.recipes.new(recipe_params)
+    redirect_to user_recipe_index_path(user_id: current_user.id) if @recipe.save
+  end
+
+  def deestroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+  end
+
+  private
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
+  end
 end
