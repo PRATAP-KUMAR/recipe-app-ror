@@ -1,5 +1,7 @@
+<p class="helloMessage" >
 <%= "Hi #{current_user.name}, would you like to add a recipe?" %><br>
-<%= link_to 'Add Recipe', new_user_recipe_path(current_user) %>
+</p>
+<%= link_to 'Add Recipe', new_user_recipe_path(current_user), class: "addFoodBtn" %>
 
 <% @recipes.each_with_index do |recipe, idx| %>
     <div class=index-container>

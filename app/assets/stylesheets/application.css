@@ -221,3 +221,25 @@ tr {
   align-self: flex-end;
   text-align: center;
 }
+
+.newRecipeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newRecipeTitle {
+  color: #213ec0;
+}
+
+.wxl {
+  width: 150%;
+}
+
+.helloMessage {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #213ec0;
+  font-size: 22px;
+}
