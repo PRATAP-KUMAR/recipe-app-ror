@@ -1,3 +1,4 @@
+<div class="foodList" >
 <%= link_to "New Food", new_user_food_path, class: "addFoodBtn" %>
 
 <table class=table>
@@ -12,9 +13,13 @@
   <td><%= food.name %></td>
   <td><%= food.measurement_unit %></td>
   <td><%= food.price %></td>
-  <td><%= link_to 'DELETE' %></td>
+  <td>
+  <%= button_to 'DELETE', user_food_path(user_id: current_user.id, id: food.id), method: :delete, class: "foodDeleteBtn" %>
+  </td>
 </tr>
 <% end %>
 </table>
+
+</div>
 
 

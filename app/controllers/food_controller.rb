@@ -13,6 +13,11 @@ class FoodController < ApplicationController
     redirect_to user_food_index_path(user_id: current_user.id) if @food.save
   end
 
+  def destroy
+    @food = Food.find(params[:id]).destroy
+    redirect_to user_food_index_path
+  end
+
   private
 
   def food_params

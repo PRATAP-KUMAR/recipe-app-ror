@@ -179,6 +179,37 @@ tr:nth-child(even) {
   border-radius: 5px;
 }
 
+.tableHeading {
+  background-color: #1b3c5c;
+}
+
+tr {
+  background-color: #717894;
+  text-align: center;
+}
+
+.foodDeleteBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+
+.foodDeleteBtn:hover {
+  color: darkred;
+  transform: scale(1.1);
+}
+
+.foodList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .addFoodBtn, 
 .addFoodBtn:visited,
 .addFoodBtn:active {
@@ -186,12 +217,7 @@ tr:nth-child(even) {
   color: white;
   padding: 3px 10px;
   border-radius: 5px;
-}
-
-.tableHeading {
-  background-color: #1b3c5c;
-}
-
-tr {
-  background-color: #717894;
+  width: 80px;
+  align-self: flex-end;
+  text-align: center;
 }
