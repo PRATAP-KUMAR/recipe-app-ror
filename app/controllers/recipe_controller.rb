@@ -19,9 +19,9 @@ class RecipeController < ApplicationController
     redirect_to user_recipe_index_path(user_id: current_user.id) if @recipe.save
   end
 
-  def deestroy
-    @recipe = Recipe.find(params[:id])
-    @recipe.destroy
+  def destroy
+    @recipe = Recipe.find(params[:id]).destroy
+    redirect_to user_recipe_index_path
   end
 
   private

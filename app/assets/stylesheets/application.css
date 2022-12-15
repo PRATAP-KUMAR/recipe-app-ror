@@ -151,3 +151,39 @@ tr:nth-child(even) {
   justify-content: space-between;
 }
 
+.addFoodContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.addFoodHeader {
+  color: #213ec0;
+}
+
+.addFoodForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.foodFormLabel {
+  color: #213ec0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.foodFormField {
+  border-radius: 5px;
+}
+
+.foodFormSubmit {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
