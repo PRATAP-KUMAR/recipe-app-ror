@@ -20,7 +20,7 @@
   </p>
 </div>
 <div class=bar-hor>
-  <%= button_to 'Generate shopping list' %>
+  <%= link_to 'General Shoping List', user_recipe_general_shopping_list_index_path(user_id: current_user.id, recipe_id: @recipe.id), class: "addIngredientLink" %>
   <%= link_to 'Add ingredient', new_user_recipe_recipe_food_path(user_id: current_user.id,recipe_id: @recipe.id), class: "addIngredientLink" %>
 </div>
 <hr>
