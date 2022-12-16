@@ -1,50 +1,51 @@
 <div>
   <div class=something>
     <h2 class="recipeShowName"><%= @recipe.name %></h2>
-    <%= form_with model: Recipe, url: edit_user_recipe_path(user_id: current_user.id, id: @recipe.id), public: true do |f| %>
-      <%= f.check_box :active %>
+    <%= form_with model: @recipe, url: user_recipe_path(user_id: current_user.id, id: @recipe.id), local: true, class: "toggleForm" do |f| %>
+      <% if @recipe.public %>
+        <%= f.submit 'Make it Private', class: "toggleButtonOn" %>
+      <%else%>
+        <%= f.submit 'Make it Public', class: "toggleButtonOff" %>
+      <% end %>
     <% end %>
   </div>
   <p class="text">
-  Preparation time: <%= @recipe.preparation_time/60.0 %> hrs <br>
+    Preparation time: <%= @recipe.preparation_time/60.0 %> hrs <br>
   </p>
   <p class="text">
-  Cooking time: <%= @recipe.cooking_time/60.0 %> hrs <br>
+    Cooking time: <%= @recipe.cooking_time/60.0 %> hrs <br>
   </p>
   <p class="text">
-  <%= @recipe.description %>
+    <%= @recipe.description %>
   </p>
 </div>
-
 <div class=bar-hor>
   <%= button_to 'Generate shopping list' %>
   <%= link_to 'Add ingredient', new_user_recipe_recipe_food_path(user_id: current_user.id,recipe_id: @recipe.id), class: "addIngredientLink" %>
 </div>
-
 <hr>
-
 <table class=table>
-<tr>
-  <th>Food</th>
-  <th>Quantity</th>
-  <th>Value</th>
-  <th>Actions</th>
-</tr>
-<% @recipe_foods.each do |recipe_food| %>
-<tr>
-  <td><%= recipe_food.food.name %></td>
-  <td>
-  <%= recipe_food.quantity.to_s %>
-  <%= recipe_food.food.measurement_unit%>
-  </td>
-  <td>
-  $
-  <%= recipe_food.food.price.to_i * recipe_food.quantity.to_i %>
-  </td>
-  <td>
-    <%= link_to 'Modify', edit_user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), class: "foodDeleteBtn" %>
-    <%= button_to 'Remove', user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), method: :delete, class: "foodDeleteBtn" %>
-  </td>
-</tr>
-<% end %>
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Value</th>
+    <th>Actions</th>
+  </tr>
+  <% @recipe_foods.each do |recipe_food| %>
+    <tr>
+      <td><%= recipe_food.food.name %></td>
+      <td>
+        <%= recipe_food.quantity.to_s %>
+        <%= recipe_food.food.measurement_unit%>
+      </td>
+      <td>
+        $
+        <%= recipe_food.food.price.to_i * recipe_food.quantity.to_i %>
+      </td>
+      <td>
+        <%= link_to 'Modify', edit_user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), class: "foodDeleteBtn" %>
+        <%= button_to 'Remove', user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), method: :delete, class: "foodDeleteBtn" %>
+      </td>
+    </tr>
+  <% end %>
 </table>

@@ -352,3 +352,31 @@ tr:nth-child(even) {
 .totolPrice {
   color: white;
 }
+
+.something {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.toggleForm {
+  align-self: flex-end;
+}
+
+.toggleButtonOn {
+  padding: 5px 10px;
+  background-color: #85868d;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.toggleButtonOff {
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
