@@ -1,13 +1,19 @@
 <div>
-  <h2><%= @recipe.name %></h2>
+  <h2 class="recipeShowName"><%= @recipe.name %></h2>
+  <p class="text">
   Preparation time: <%= @recipe.preparation_time/60.0 %> hrs <br>
+  </p>
+  <p class="text">
   Cooking time: <%= @recipe.cooking_time/60.0 %> hrs <br>
+  </p>
+  <p class="text">
   <%= @recipe.description %>
+  </p>
 </div>
 
 <div class=bar-hor>
   <%= button_to 'Generate shopping list' %>
-  <%= button_to 'Add ingredient' %>
+  <%= link_to 'Add ingredient', new_user_recipe_recipe_food_path(user_id: current_user.id,recipe_id: @recipe.id), class: "addIngredientLink" %>
 </div>
 
 <hr>
@@ -19,14 +25,20 @@
   <th>Value</th>
   <th>Actions</th>
 </tr>
-<% @foods.each do |food| %>
+<% @recipe_foods.each do |recipe_food| %>
 <tr>
-  <td><%= food.name %></td>
-  <td><%= food.quantity %></td>
-  <td><%= food.price %></td>
+  <td><%= recipe_food.food.name %></td>
   <td>
-    <%= link_to 'Modify' %>
-    <%= link_to 'Remove' %>
+  <%= recipe_food.quantity.to_s %>
+  <%= recipe_food.food.measurement_unit%>
+  </td>
+  <td>
+  $
+  <%= recipe_food.food.price.to_i * recipe_food.quantity.to_i %>
+  </td>
+  <td>
+    <%= link_to 'Modify', edit_user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), class: "foodDeleteBtn" %>
+    <%= button_to 'Remove', user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), method: :delete, class: "foodDeleteBtn" %>
   </td>
 </tr>
 <% end %>
