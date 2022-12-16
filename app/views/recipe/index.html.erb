@@ -11,7 +11,9 @@
           <p><%= "Show RECIPE #{idx+1}" %></p>
           <% end %>
           <h2><%= recipe.name %></h2>
-          <%= button_to 'REMOVE', user_recipe_path(user_id: current_user.id, id: recipe.id), method: :delete %>
+          <% if can? :manage, recipe %>
+            <%= button_to 'REMOVE', user_recipe_path(user_id: current_user.id, id: recipe.id), method: :delete %>
+          <% end %>
         </div>
         <div class=right-box>
           <%= recipe.description %>
@@ -20,7 +22,3 @@
     </div>
 
 <%end%>
-
-<%# <%= button_to 'Delete', article_path(article), method: :delete %>
-
-  <%# <%= link_to user_recipe_path(user_id: current_user.id, id: recipe.id) do %>
