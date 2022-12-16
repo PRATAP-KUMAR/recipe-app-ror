@@ -1,0 +1,16 @@
+<header>
+    <div class=container>
+        <nav>
+            <ul>
+                <li><%= link_to 'FOODS', user_food_index_path(current_user) %></li>
+                <li><%= link_to 'RECIPES', user_recipe_index_path(current_user) %></li>
+                <li><%= link_to 'PUBLIC RECIPES', public_recipies_path %></li>
+                <% if user_signed_in? %>
+                            <li><%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %></li>
+                <% else %>
+                            <li><%= link_to 'SIGN IN' %></li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
+</header>
