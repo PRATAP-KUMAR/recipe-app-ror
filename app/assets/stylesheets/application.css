@@ -243,3 +243,50 @@ tr:nth-child(even) {
   color: #213ec0;
   font-size: 22px;
 }
+
+.newRecipeFood {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newRecipeFoodTitle {
+  color: #213ec0;
+}
+
+.recipeFoodEditContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeFoodEdit {
+  color: #213ec0;
+}
+
+.recipeShowName {
+  color: #213ec0;
+}
+
+.addIngredientLink,
+.addIngredientLink:active,
+.addIngredientLink:link,
+.addIngredientLink:visited {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.addIngredientLink:hover {
+  background-color: #1b3c5c;
+  transform: translateY(-2px);
+}
+
+.text {
+  color: #213ec0;
+}
