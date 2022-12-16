@@ -25,6 +25,16 @@ class RecipeController < ApplicationController
     redirect_to user_recipe_index_path
   end
 
+  def public_recipe
+    @recipies = Recipe.where(public: true).includes(:user)
+    @total_price = 0
+    @recipies.each do |recipe|
+      recipe.recipe_foods.each do |recipe_food|
+        @total_price += recipe_food.food.price
+      end
+    end
+  end
+
   private
 
   def recipe_params

@@ -290,3 +290,65 @@ tr:nth-child(even) {
 .text {
   color: #213ec0;
 }
+
+.publicListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.publicRecipeTitle {
+  color: #213ec0;
+}
+
+.publicRecipesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.recipeCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #43aadd;
+  width: 130%;
+  border-radius: 10px;
+}
+
+.recipeCardLeft {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeName {
+  color: white;
+}
+
+.recipeAuthor {
+  color: white;
+}
+
+.recipeCardRight {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.totalFoodItems {
+  color: white;
+}
+
+.totolPrice {
+  color: white;
+}
