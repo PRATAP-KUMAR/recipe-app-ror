@@ -27,10 +27,10 @@ class RecipeController < ApplicationController
 
   def public_recipe
     @recipies = Recipe.where(public: true).includes(:user)
-    @totalPrice = 0
+    @total_price = 0
     @recipies.each do |recipe|
       recipe.recipe_foods.each do |recipe_food|
-        @totalPrice += recipe_food.food.price
+        @total_price += recipe_food.food.price
       end
     end
   end

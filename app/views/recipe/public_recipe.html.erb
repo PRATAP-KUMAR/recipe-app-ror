@@ -2,6 +2,7 @@
   <h1 class="publicRecipeTitle">
     Public Recipies
   </h1>
+  <div class="publicRecipesList">
   <% @recipies.each do |recipe|%>
     <div class="recipeCard">
       <div class="recipeCardLeft">
@@ -9,23 +10,14 @@
           <%= recipe.name %>
         </p>
         <p class="recipeAuthor">
-          <%= "By: #{recipe.user.email}" %>
+          <%= "By: #{recipe.user.name}" %>
         </p>
       </div>
       <div class="recipeCardRight">
-        <p class="totalFoodItems">
-            <p>
-            Total food Items
-          <%= recipe.recipe_foods.all.length %>
-            </p>
-        </p>
-        <p class="totolPrice">
-        <p>
-            Total Price: $
-          <%= @totalPrice%>
-            </p>
-        </p>
+        <p class="totalFoodItems"> Total food Items: <%= recipe.recipe_foods.all.length %> </p>
+        <p class="totolPrice">Total Price: $ <%= @total_price%> </p>
       </div>
       <div>
       <% end %>
+      </div>
     </div>
