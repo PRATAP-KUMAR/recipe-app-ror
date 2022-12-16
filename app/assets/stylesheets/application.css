@@ -6,22 +6,6 @@ a {
   text-decoration: none;
 }
 
-a:link {
-  color: #c7aa29;
-}
-
-a:visited {
-  color: #213ec0;
-}
-
-a:hover {
-  color: #b31c1c;
-}
-
-a:active {
-  color: #333;
-}
-
 .title {
   text-align: center;
   font-size: 40px;
@@ -425,6 +409,22 @@ nav a {
   font-size: 14px;
 }
 
+a:link {
+  color: #c7aa29;
+}
+
+a:visited {
+  color: #213ec0;
+}
+
+a:hover {
+  color: #b31c1c;
+}
+
+a:active {
+  color: #333;
+}
+
 nav a:hover {
   color: #000;
 }
@@ -466,14 +466,14 @@ nav a:hover {
 }
 
 .signOutBtn {
- background-color: #eee;
- color: #251207;
- border: none;
- outline: none;
- font-weight: bold;
- padding: 5px 10px;
- border-radius: 5px;
- transition: all 0.3s;
+  background-color: #eee;
+  color: #251207;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
 
 .signOutBtn:hover {
