@@ -380,3 +380,28 @@ tr:nth-child(even) {
   font-weight: bold;
   border-radius: 5px;
 }
+
+.generalShoppingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generalShoppingTitle {
+  color: #213ec0;
+}
+
+.missingFoodInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generalShoppingListTableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
