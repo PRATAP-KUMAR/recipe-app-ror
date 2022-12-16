@@ -1,0 +1,25 @@
+<div class="publicListContainer">
+  <h1 class="publicRecipeTitle">
+    Public Recipies
+  </h1>
+  <% @recipies.each do |recipe|%>
+    <div class="recipeCard">
+      <div class="recipeCardLeft">
+        <p class="recipeName">
+          <%= recipe.name %>
+        </p>
+        <p class="recipeAuthor">
+          <%= "By: #{recipe.user.name}" %>
+        </p>
+      </div>
+      <div class="recipeCardRight">
+        <p class="totalFoodItems">
+          <%# <%= recipe.totalFoodItems %> %>
+        </p>
+        <p class="totolPrice">
+          <%# <%= recipe.price %> %>
+        </p>
+      </div>
+      <div>
+      <% end %>
+    </div>
