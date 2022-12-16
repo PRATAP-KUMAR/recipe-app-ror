@@ -9,15 +9,21 @@
           <%= recipe.name %>
         </p>
         <p class="recipeAuthor">
-          <%= "By: #{recipe.user.name}" %>
+          <%= "By: #{recipe.user.email}" %>
         </p>
       </div>
       <div class="recipeCardRight">
         <p class="totalFoodItems">
-          <%# <%= recipe.totalFoodItems %> %>
+            <p>
+            Total food Items
+          <%= recipe.recipe_foods.all.length %>
+            </p>
         </p>
         <p class="totolPrice">
-          <%# <%= recipe.price %> %>
+        <p>
+            Total Price: $
+          <%= @totalPrice%>
+            </p>
         </p>
       </div>
       <div>

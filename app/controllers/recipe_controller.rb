@@ -26,7 +26,13 @@ class RecipeController < ApplicationController
   end
 
   def public_recipe
-    @recipies = Recipe.where(:public => true).includes(:user)
+    @recipies = Recipe.where(public: true).includes(:user)
+    @totalPrice = 0
+    @recipies.each do |recipe|
+      recipe.recipe_foods.each do |recipe_food|
+        @totalPrice += recipe_food.food.price
+      end
+    end
   end
 
   private
