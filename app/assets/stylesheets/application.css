@@ -415,8 +415,7 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 70px;
-  padding-top: 35px;
+  padding: 5px 10px;
 }
 
 nav a {
@@ -428,4 +427,61 @@ nav a {
 
 nav a:hover {
   color: #000;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #251207;
+  border-radius: 10px;
+  color: white;
+}
+
+.navWellcome {
+  flex: 2;
+}
+
+.navLinks {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navLink,
+.navLink:visited,
+.navLink:active {
+  color: #eee;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.navLink:hover {
+  background-color: #eee;
+  color: #251207;
+  transform: translateY(-3px);
+}
+
+.signOutBtn {
+ background-color: #eee;
+ color: #251207;
+ border: none;
+ outline: none;
+ font-weight: bold;
+ padding: 5px 10px;
+ border-radius: 5px;
+ transition: all 0.3s;
+}
+
+.signOutBtn:hover {
+  background-color: #8f0000;
+  color: #eee;
+}
+
+.firstPage {
+  height: 100%;
+  width: 100%;
 }

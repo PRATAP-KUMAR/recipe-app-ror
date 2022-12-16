@@ -1,12 +1,6 @@
-<h1>Welcome to Recipe App</h1>
-you are logged in as: <%= current_user.email %>
 
-<%= button_to "Sign Out", destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'sign-out-btn' %>
+<%= image_tag 'bg.jpg', class: "firstPage" %>
 
-<div class=home-page>
-  <%= link_to 'Foods', user_food_index_path(current_user) %>
-  <%= link_to 'Recipes', user_recipe_index_path(current_user) %>
-</div>
 
 
 
