@@ -1,0 +1,2 @@
+module PublicRecipeHelper
+end

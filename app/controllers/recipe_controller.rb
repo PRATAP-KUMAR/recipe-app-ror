@@ -1,4 +1,6 @@
 class RecipeController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @recipes = current_user.recipes
   end
@@ -17,12 +19,17 @@ class RecipeController < ApplicationController
   def create
     @user = current_user
     @recipe = @user.recipes.new(recipe_params)
-    redirect_to user_recipe_index_path(user_id: current_user.id) if @recipe.save
+    redirect_to recipe_index_path if @recipe.save
   end
 
   def destroy
     @recipe = Recipe.find(params[:id]).destroy
-    redirect_to user_recipe_index_path
+    # redirect_to public_recipe_index_path
+    # if current_page?(controller: 'recipe', action: 'checkout')
+    # redirect_to public_recipe_index_path
+    # else
+    redirect_to recipe_index_path
+    # end
   end
 
   def edit
@@ -30,17 +37,10 @@ class RecipeController < ApplicationController
   end
 
   def update
-    # @recipe = Recipe.find(params[:id])
-    # if @recipe.update(recipe_params)
-    #   flash[:success] = 'Recipe food was successfully updated.'
-    #   redirect_to user_recipe_path(current_user, @recipe)
-    # else
-    #   render :edit, status: :unprocessable_entity
-    # end
     @recipe = Recipe.find(params[:id])
     @recipe.public = !@recipe.public
     @recipe.save
-    redirect_to user_recipe_path(current_user, @recipe)
+    redirect_to public_recipe_index_path
   end
 
   def toggle

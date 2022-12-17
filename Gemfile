@@ -78,5 +78,10 @@ group :test do
 end
 
 # added my self - PRATAP PANABAKA (Collaborator 1)
+gem 'bullet'
+gem 'cancancan'
 gem 'devise'
+gem 'honeybadger'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'uniform_notifier'
+gem 'xmpp4r'
