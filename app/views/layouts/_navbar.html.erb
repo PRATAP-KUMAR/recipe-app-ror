@@ -8,9 +8,9 @@
         </p>
       </div>
       <ul class="navLinks">
-        <li><%= link_to 'FOODS', user_food_index_path(current_user), class: "navLink" %></li>
-        <li><%= link_to 'RECIPES', user_recipe_index_path(current_user), class: "navLink" %></li>
-        <li><%= link_to 'PUBLIC RECIPES', public_recipies_path, class: "navLink" %></li>
+        <li><%= link_to 'FOODS', food_index_path, class: "navLink" %></li>
+        <li><%= link_to 'RECIPES', recipe_index_path, class: "navLink" %></li>
+        <li><%= link_to 'PUBLIC RECIPES', public_recipe_index_path, class: "navLink" %></li>
         <% if user_signed_in? %>
           <li><%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: "signOutBtn" %></li>
         <% else %>

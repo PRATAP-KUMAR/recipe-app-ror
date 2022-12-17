@@ -1,7 +1,7 @@
 <div class="addFoodContainer"> 
 <h1 class="addFoodHeader"> Create Food </h1>
 <div class="addFoodForm">
-<%= form_with model: @food, url: user_food_index_path, local: true do |f| %>
+<%= form_with model: @food, url: new_food_path, local: true do |f| %>
     <p>
     <%= f.label :name, class: "foodFormLabel" %> <br>
     <%= f.text_field :name, placeholder: 'Name', class: "foodFormField" %>

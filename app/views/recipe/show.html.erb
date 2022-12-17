@@ -1,7 +1,7 @@
 <div>
   <div class=something>
     <h2 class="recipeShowName"><%= @recipe.name %></h2>
-    <%= form_with model: @recipe, url: user_recipe_path(user_id: current_user.id, id: @recipe.id), local: true, class: "toggleForm" do |f| %>
+    <%= form_with model: @recipe, url: recipe_path(user_id: current_user.id, id: @recipe.id), local: true, class: "toggleForm" do |f| %>
       <% if @recipe.public %>
         <%= f.submit 'Make it Private', class: "toggleButtonOn" %>
       <%else%>
@@ -20,8 +20,8 @@
   </p>
 </div>
 <div class=bar-hor>
-  <%= link_to 'General Shoping List', user_recipe_general_shopping_list_index_path(user_id: current_user.id, recipe_id: @recipe.id), class: "addIngredientLink" %>
-  <%= link_to 'Add ingredient', new_user_recipe_recipe_food_path(user_id: current_user.id,recipe_id: @recipe.id), class: "addIngredientLink" %>
+  <%= link_to 'General Shoping List', general_shopping_list_index_path(user_id: current_user.id, recipe_id: @recipe.id), class: "addIngredientLink" %>
+  <%= link_to 'Add ingredient', new_recipe_recipe_food_path(user_id: current_user.id,recipe_id: @recipe.id), class: "addIngredientLink" %>
 </div>
 <hr>
 <table class=table>
@@ -43,8 +43,8 @@
         <%= recipe_food.food.price.to_i * recipe_food.quantity.to_i %>
       </td>
       <td>
-        <%= link_to 'Modify', edit_user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), class: "foodDeleteBtn" %>
-        <%= button_to 'Remove', user_recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), method: :delete, class: "foodDeleteBtn" %>
+        <%= link_to 'Modify', recipe_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), class: "foodDeleteBtn" %>
+        <%= button_to 'Remove',recipe_recipe_food_path(user_id: current_user.id, recipe_id: @recipe.id, id: recipe_food.id), method: :delete, class: "foodDeleteBtn" %>
       </td>
     </tr>
   <% end %>

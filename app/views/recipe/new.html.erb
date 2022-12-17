@@ -3,7 +3,7 @@
 Create Recipe
 </h1>
 
-<%= form_with model: @recipe, url: user_recipe_index_path(@user), local: true do |f| %>
+<%= form_with model: @recipe, url: new_recipe_path(@user), local: true do |f| %>
     <p>
     <%= f.label :name, class: "foodFormLabel" %> <br>
     <%= f.text_field :name, placeholder: 'Name', class: "foodFormField wxl" %>
