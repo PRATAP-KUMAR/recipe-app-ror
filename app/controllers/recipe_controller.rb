@@ -24,7 +24,12 @@ class RecipeController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id]).destroy
+    # redirect_to public_recipe_index_path
+    # if current_page?(controller: 'recipe', action: 'checkout')
+    # redirect_to public_recipe_index_path
+    # else
     redirect_to recipe_index_path
+    # end
   end
 
   def edit
@@ -35,7 +40,7 @@ class RecipeController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.public = !@recipe.public
     @recipe.save
-    redirect_to recipe_path(current_user, @recipe)
+    redirect_to public_recipe_index_path
   end
 
   def toggle

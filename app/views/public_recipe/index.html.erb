@@ -4,6 +4,9 @@
         <div class=left-box>
           <h2><%= recipe.name %></h2>
         </div>
+          <% if can? :manage, recipe %>
+            <%= button_to 'REMOVE', recipe_path(id: recipe.id), method: :delete %>
+          <% end %>
         <div class=right-box>
           <%= recipe.description %>
         </div>
