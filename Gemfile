@@ -81,3 +81,7 @@ end
 gem 'cancancan'
 gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'bullet'
+gem 'honeybadger'
+gem "uniform_notifier"
+gem "xmpp4r"

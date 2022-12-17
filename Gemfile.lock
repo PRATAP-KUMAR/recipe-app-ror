@@ -74,6 +74,9 @@ GEM
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.4)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     cancancan (3.4.0)
     capybara (3.38.0)
       addressable
@@ -100,6 +103,7 @@ GEM
     erubi (1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    honeybadger (5.0.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -242,6 +246,7 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.3.0)
+    uniform_notifier (1.16.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -257,6 +262,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xmpp4r (0.5.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.6)
@@ -266,10 +272,12 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bullet
   cancancan
   capybara
   debug
   devise
+  honeybadger
   importmap-rails
   jbuilder
   letter_opener
@@ -283,8 +291,10 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  uniform_notifier
   web-console
   webdrivers
+  xmpp4r
 
 RUBY VERSION
    ruby 3.0.4p208

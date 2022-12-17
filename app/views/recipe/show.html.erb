@@ -20,7 +20,7 @@
   </p>
 </div>
 <div class=bar-hor>
-  <%= link_to 'General Shoping List', general_shopping_list_index_path, class: "addIngredientLink" %>
+  <%= link_to 'General Shoping List', general_shopping_list_index_path(recipe_id: @recipe.id), class: "addIngredientLink" %>
   <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: "addIngredientLink" %>
 </div>
 <hr>
