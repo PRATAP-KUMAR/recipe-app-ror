@@ -1,0 +1,527 @@
+body {
+  margin: 50px 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.form-holder {
+  width: 80%;
+  margin: auto;
+  padding: 30px 0 0 0;
+  text-align: center;
+  height: 100vh;
+}
+
+.field {
+  margin: 40px 0 0 0;
+}
+
+.sign-up {
+  width: 80%;
+  height: 50px;
+  border-radius: 8px;
+  margin: 40px 0 0 0;
+}
+
+.default > :any-link {
+  color: blue;
+}
+
+.default > :any-link:hover {
+  color: orange;
+}
+
+.area {
+  width: 80%;
+  height: 50px;
+  padding: 0 2% 0 2%;
+  border-radius: 8px;
+}
+
+.login-btn {
+  width: 80%;
+  height: 50px;
+  cursor: pointer;
+  color: blue;
+  border-radius: 8px;
+}
+
+.login-btn:hover {
+  color: orange;
+}
+
+.sign-out-btn {
+  margin-top: 10px;
+}
+
+.home-page {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.index-container {
+  margin: 20px 0;
+  padding: 2px;
+  border-radius: 8px;
+  border: 1px solid #717894;
+  background: #a8cac0;
+}
+
+.recipe-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.left-box > p {
+  font-size: 10px;
+  font-style: italic;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.right-box {
+  display: flex;
+  flex: 2;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.table {
+  width: 100%;
+  color: #fff;
+}
+
+.table,
+th,
+td {
+  border: 2px solid #43aadd;
+  border-collapse: collapse;
+  padding: 12px 5px;
+}
+
+tr {
+  background-color: #717894;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #85868d;
+}
+
+.bar-hor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addFoodContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.addFoodHeader {
+  color: #213ec0;
+}
+
+.addFoodForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.foodFormLabel {
+  color: #213ec0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.foodFormField {
+  border-radius: 5px;
+}
+
+.foodFormSubmit {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.tableHeading {
+  background-color: #1b3c5c;
+}
+
+.foodDeleteBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+
+.foodDeleteBtn:hover {
+  color: darkred;
+  transform: scale(1.1);
+}
+
+.foodList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addFoodBtn,
+.addFoodBtn:visited,
+.addFoodBtn:active {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  width: 80px;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.newRecipeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newRecipeTitle {
+  color: #213ec0;
+}
+
+.wxl {
+  width: 150%;
+}
+
+.helloMessage {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #213ec0;
+  font-size: 22px;
+}
+
+.newRecipeFood {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newRecipeFoodTitle {
+  color: #213ec0;
+}
+
+.recipeFoodEditContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeFoodEdit {
+  color: #213ec0;
+}
+
+.recipeShowName {
+  color: #213ec0;
+}
+
+.addIngredientLink,
+.addIngredientLink:active,
+.addIngredientLink:link,
+.addIngredientLink:visited {
+  background-color: #213ec0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.addIngredientLink:hover {
+  background-color: #1b3c5c;
+  transform: translateY(-2px);
+}
+
+.text {
+  color: #213ec0;
+}
+
+.publicListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.publicRecipeTitle {
+  color: #213ec0;
+}
+
+.publicRecipesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.recipeCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #43aadd;
+  width: 130%;
+  border-radius: 10px;
+}
+
+.recipeCardLeft {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeName {
+  color: white;
+}
+
+.recipeAuthor {
+  color: white;
+}
+
+.recipeCardRight {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.totalFoodItems {
+  color: white;
+}
+
+.totolPrice {
+  color: white;
+}
+
+.something {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.toggleForm {
+  align-self: flex-end;
+}
+
+.toggleButtonOn {
+  padding: 5px 10px;
+  background-color: #85868d;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.toggleButtonOff {
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.generalShoppingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generalShoppingTitle {
+  color: #213ec0;
+}
+
+.missingFoodInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generalShoppingListTableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* NAV BAR */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+a:link {
+  color: #c7aa29;
+}
+
+a:visited {
+  color: #213ec0;
+}
+
+a:hover {
+  color: #b31c1c;
+}
+
+a:active {
+  color: #333;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #251207;
+  border-radius: 10px;
+  color: white;
+}
+
+.navWellcome {
+  flex: 2;
+}
+
+.navLinks {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navLink,
+.navLink:visited,
+.navLink:active {
+  color: #eee;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.navLink:hover {
+  background-color: #eee;
+  color: #251207;
+  transform: translateY(-3px);
+}
+
+.signOutBtn {
+  background-color: #eee;
+  color: #251207;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.signOutBtn:hover {
+  background-color: #8f0000;
+  color: #eee;
+}
+
+.firstPage {
+  height: 100%;
+  width: 100%;
+}
+
+.showRecipeLink,
+.showRecipeLink:active,
+.showRecipeLink:link,
+.showRecipeLink:visited {
+  background-color: #213ec0;
+  color: #eee;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.showRecipeLink:hover {
+  background-color: #eee;
+  color: #213ec0;
+}
+
+.deleteRecipeLink,
+.deleteRecipeLink:active,
+.deleteRecipeLink:link,
+.deleteRecipeLink:visited {
+  background-color: #8f0000;
+  color: #eee;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.deleteRecipeLink:hover {
+  background-color: #eee;
+  color: #8f0000;
+}

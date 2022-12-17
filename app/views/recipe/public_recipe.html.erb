@@ -1,0 +1,30 @@
+<div class="publicListContainer">
+  <h1 class="publicRecipeTitle">
+    Public Recipies
+  </h1>
+  <div class="publicRecipesList">
+  <%if @recipies.length == 0%>
+      <h1 class="text"> There are no public recipes </h1>
+  <%else%>
+    <% @recipies.each do |recipe|%>
+    <%= link_to recipe_path(recipe.id) do %>
+          <p><%= "Show RECIPE #{idx+1}" %></p>
+          <% end %>
+        <div class="recipeCard">
+          <div class="recipeCardLeft">
+            <p class="recipeName">
+              <%= recipe.name %>
+            </p>
+            <p class="recipeAuthor">
+              <%= "By: #{recipe.user.name}" %>
+            </p>
+          </div>
+          <div class="recipeCardRight">
+            <p class="totalFoodItems"> Total food Items: <%= recipe.recipe_foods.all.length %> </p>
+            <p class="totolPrice">Total Price: $ <%= @total_price%> </p>
+          </div>
+          <div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>

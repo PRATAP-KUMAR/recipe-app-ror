@@ -1,0 +1,23 @@
+<p class="helloMessage" >
+<%= "Hi #{current_user.name}, would you like to add a recipe?" %><br>
+</p>
+<%= link_to 'Add Recipe', new_recipe_path, class: "addFoodBtn" %>
+
+<% @recipes.each_with_index do |recipe, idx| %>
+    <div class=index-container>
+      <div class=recipe-card>
+        <div class=left-box>
+        <%= link_to recipe_path(recipe.id) do %>
+          <p><%= "Show RECIPE #{idx+1}" %></p>
+          <% end %>
+          <h2><%= recipe.name %></h2>
+          <% if can? :manage, recipe %>
+            <%= button_to 'REMOVE', recipe_path(id: recipe.id), method: :delete %>
+          <% end %>
+        </div>
+        <div class=right-box>
+          <%= recipe.description %>
+        </div>
+      </div>
+    </div>
+<%end%>

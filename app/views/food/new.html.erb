@@ -1,0 +1,24 @@
+<div class="addFoodContainer"> 
+<h1 class="addFoodHeader"> Create Food </h1>
+<div class="addFoodForm">
+<%= form_with model: @food, url: food_index_path, local: true do |f| %>
+    <p>
+    <%= f.label :name, class: "foodFormLabel" %> <br>
+    <%= f.text_field :name, placeholder: 'Name', class: "foodFormField" %>
+    </p>
+    <p>
+    <%= f.label :measurement_unit, class: "foodFormLabel"  %> <br>
+    <%= f.text_field :measurement_unit, placeholder: 'Measurement Unit', class: "foodFormField" %>
+    </p>
+    <p>
+    <%= f.label :price, class: "foodFormLabel" %> <br>
+    <%= f.text_field :price, placeholder: 'Price', class: "foodFormField" %>
+    </p>
+    <p>
+     <%= f.label :quantity, class: "foodFormLabel" %> <br>
+    <%= f.text_field :quantity, placeholder: 'Quantity', class: "foodFormField" %>
+    </p>
+    <%= f.submit 'Submit', class: "foodFormSubmit" %>
+<% end %>
+</div>
+</div>
