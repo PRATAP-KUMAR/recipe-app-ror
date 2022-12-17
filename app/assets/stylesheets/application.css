@@ -78,12 +78,14 @@ a {
 
 .recipe-card {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-box {
   display: flex;
   flex-direction: column;
-  flex: 0.45;
+  flex: 2;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -98,9 +100,11 @@ a {
 }
 
 .right-box {
-  flex: 0.55;
+  display: flex;
+  flex: 2;
   font-size: 20px;
   align-items: center;
+  justify-content: space-between;
   padding: 12px;
 }
 
@@ -484,4 +488,40 @@ nav a:hover {
 .firstPage {
   height: 100%;
   width: 100%;
+}
+
+.showRecipeLink,
+.showRecipeLink:active,
+.showRecipeLink:link,
+.showRecipeLink:visited {
+  background-color: #213ec0;
+  color: #eee;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.showRecipeLink:hover {
+  background-color: #eee;
+  color: #213ec0;
+}
+
+.deleteRecipeLink,
+.deleteRecipeLink:active,
+.deleteRecipeLink:link,
+.deleteRecipeLink:visited {
+  background-color: #8f0000;
+  color: #eee;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.deleteRecipeLink:hover {
+  background-color: #eee;
+  color: #8f0000;
 }
