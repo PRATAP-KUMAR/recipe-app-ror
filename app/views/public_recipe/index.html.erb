@@ -1,15 +1,20 @@
-<% @recipes.each_with_index do |recipe, idx| %>
-    <div class=index-container>
-      <div class=recipe-card>
-        <div class=left-box>
-          <h2><%= recipe.name %></h2>
-        </div>
-          <% if can? :manage, recipe %>
-            <%= button_to 'REMOVE', recipe_path(id: recipe.id), method: :delete %>
+<%if @recipes.length == 0%>
+  <h1 class="text"> There are no public recipes </h1>
+<%else%>
+  <% @recipes.each_with_index do |recipe, idx| %>
+      <div class=index-container>
+        <div class=recipe-card>
+          <div class=left-box>
+            <h2><%= recipe.name %></h2>
+          </div>
+          <div class=right-box>
+            <%= recipe.description %>
+            <% if can? :manage, recipe %>
+            <%= button_to 'REMOVE', recipe_path(id: recipe.id), method: :delete, class: "deleteRecipeLink" %>
           <% end %>
-        <div class=right-box>
-          <%= recipe.description %>
+           <%= link_to "Details", recipe_path(recipe.id),  class: "showRecipeLink" %>
+          </div>
         </div>
       </div>
-    </div>
+    <%end%>
 <%end%>
