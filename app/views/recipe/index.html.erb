@@ -1,7 +1,7 @@
 <p class="helloMessage" >
 <%= "Hi #{current_user.name}, would you like to add a recipe?" %><br>
 </p>
-<%= link_to 'Add Recipe', new_recipe_path(current_user), class: "addFoodBtn" %>
+<%= link_to 'Add Recipe', new_recipe_path, class: "addFoodBtn" %>
 
 <% @recipes.each_with_index do |recipe, idx| %>
     <div class=index-container>
@@ -20,5 +20,4 @@
         </div>
       </div>
     </div>
-
 <%end%>

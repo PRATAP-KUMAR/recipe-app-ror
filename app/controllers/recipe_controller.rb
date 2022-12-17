@@ -35,7 +35,7 @@ class RecipeController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.public = !@recipe.public
     @recipe.save
-    redirect_to user_recipe_path(current_user, @recipe)
+    redirect_to recipe_path(current_user, @recipe)
   end
 
   def toggle
